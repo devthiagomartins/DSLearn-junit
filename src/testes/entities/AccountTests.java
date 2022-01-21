@@ -30,5 +30,15 @@ public class AccountTests {
 		Assertions.assertEquals(expectedValue, acc.getBalance());
 		
 	}
+	
+	@Test
+	public void balanceValueShouldBeZeroWhenFullWithdraw() {
+		
+		double expectedValue = 0.0;
+		Account acc = new Account(1L, 300.0);
+		acc.fullWithdraw();
+		
+		Assertions.assertEquals(expectedValue, acc.getBalance());
+	}
 
 }
